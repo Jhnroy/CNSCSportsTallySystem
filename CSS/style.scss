@@ -14,6 +14,8 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     padding: .5rem;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
     border-radius: 12px;
     background: none;
     color: white;
@@ -39,11 +41,12 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     height: 53.938rem;
     background-color: antiquewhite;
 }
+
 #spfooter{
     width: 123.875rem;
     height: 24.875rem;
     background-image: url(/IMG/header-color.png);
     background-size: cover;
-    color: fefefe;
+    color: white;
     padding: 20px 20px 20px 20px;
 }
