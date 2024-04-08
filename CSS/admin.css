@@ -1,0 +1,28 @@
+body, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainHeader {
+  background-color: #800000;
+  height: 9.125rem;
+}
+
+#ScoreTally {
+  width: 47.688rem;
+  height: 53.938rem;
+  background-color: antiquewhite;
+}
+
+#spfooter {
+  width: 123.875rem;
+  height: 24.875rem;
+  background-image: url(/IMG/header-color.png);
+  background-size: cover;
+  color: white;
+  padding: 20px 20px 20px 20px;
+}
+/*# sourceMappingURL=admin.css.map */
