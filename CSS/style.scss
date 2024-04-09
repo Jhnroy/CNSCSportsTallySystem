@@ -5,13 +5,28 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
 #mainHeader{
     background-color: #800000;
     height: 9.125rem;
+    
 }
-
-#LoginBtn{
+#MainBtnContainer{
     position: absolute;
     right: 0;
     top: 20px;
     padding: .5rem;
+}
+#SignupBtn{
+   
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 12px;
+    background: none;
+    color: white;
+    font-weight: bold;
+}
+
+#LoginBtn{
+    
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -23,6 +38,11 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
 }
 
 #LoginBtn:hover{
+    background-color: white;
+    color: $MainColor;
+    transition: 1s;
+}
+#SignupBtn:hover{
     background-color: white;
     color: $MainColor;
     transition: 1s;
