@@ -22,25 +22,38 @@ const db = getDatabase();
 const auth = getAuth(app);
 
 // Selecting input elements
+let FirstName = document.getElementById('InputFirstName');
+let MiddleName = document.getElementById('InputMiddleName');
+let LastName = document.getElementById('InputLastName');
 let Email = document.getElementById('InputEmail1');
 let Password = document.getElementById('InputPassword1');
+let MainForm = document.getElementById('MainForm');
 
 // Function to register a user
 let RegisterUser = evt => {
     evt.preventDefault();
 
+   
     const emailValue = Email.value;
     const passwordValue = Password.value;
-    
+
     // Registering the user with email and password
-    createUserWithEmailAndPassword(auth, emailValue, passwordValue)
+    createUserWithEmailAndPassword(auth, Email.value, Password.value)
         .then((credentials) => {
-            console.log(credentials);
+            set (ref(db), 'UsersAuthList/'+ credentials.user.uid),{
+                firstname:FirstName.value,
+                lastname:LastName.value
+            }
         })
         .catch((error) => {
-            alert(error.message);
-            console.log(error.code);
-            console.log(error.message);
+            if (error.code === 'auth/email-already-in-use') {
+                alert('User is already registered.');
+            } else {
+                alert(error.message);
+                console.log(error.code);
+                console.log(error.message);
+            }
+           
         });
 };
 
