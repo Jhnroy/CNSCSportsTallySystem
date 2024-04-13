@@ -10,6 +10,11 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
+
+#MainLogo{
+    cursor: pointer;
+}
+
 #MainBtnContainer{
     position: absolute;
     right: 0;
@@ -85,7 +90,6 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     filter: brightness(0.6);
   }
 
-
 #spfooter{
     width: 123.875rem;
     height: 24.875rem;
@@ -100,7 +104,7 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
         opacity: 0;
         transform: rotateX(-10deg); 
     }
-    
+
     to{
         opacity: 1;
         transform: rotateX(0);
