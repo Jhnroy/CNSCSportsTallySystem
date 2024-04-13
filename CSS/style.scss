@@ -79,6 +79,28 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     height: 53.938rem;
     background-color: antiquewhite;
 }
+
+#UpdateContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: dense;
+    
+}
+
+#hero-carousel{
+    grid-column: 3/2;
+}
+
+#hero-carousel-player{
+    grid-column: 3/3;
+}
+
+#hero-carousel-update{
+    grid-column: 3/3;
+}
+
+
 // Carousel
 .c-item {
     height: 480px;
