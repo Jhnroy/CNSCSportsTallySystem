@@ -5,6 +5,9 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
 #mainHeader{
     background-color: #800000;
     height: 9.125rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 #MainBtnContainer{
@@ -13,8 +16,8 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     top: 20px;
     padding: .5rem;
 }
+
 #SignupBtn{
-   
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -23,10 +26,10 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     background: none;
     color: white;
     font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #LoginBtn{
-    
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -35,6 +38,13 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     background: none;
     color: white;
     font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#MainContainer{
+    animation: transitionIn 0.75s;
+
 }
 
 #LoginBtn:hover{
@@ -46,6 +56,7 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     background-color: white;
     color: $MainColor;
     transition: 1s;
+    
 }
 
 #headline{
@@ -54,6 +65,8 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     background-color: $MainColor;
     color: white;
     text-align: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #ScoreTally{
@@ -61,6 +74,17 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     height: 53.938rem;
     background-color: antiquewhite;
 }
+// Carousel
+.c-item {
+    height: 480px;
+  }
+  
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+
 
 #spfooter{
     width: 123.875rem;
@@ -69,4 +93,18 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     background-size: cover;
     color: white;
     padding: 20px 20px 20px 20px;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg); 
+    }
+    
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+
 }

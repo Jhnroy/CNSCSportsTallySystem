@@ -59,4 +59,3 @@ let RegisterUser = evt => {
 
 // Adding event listener to the form
 MainForm.addEventListener('submit', RegisterUser);
-

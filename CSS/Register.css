@@ -1,14 +1,16 @@
 body, * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #mainHeader {
   background-color: #800000;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 9.125rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #CnscLogo {
@@ -16,21 +18,29 @@ body, * {
 }
 
 #LoginForm {
+  position: -webkit-sticky;
   position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15.438rem;
   width: 73.125rem;
   height: 48.563rem;
   background-color: #800000;
   border-radius: 25px;
   text-align: center;
   color: white;
-  margin-top: 10.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15.438rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #MainForm h3 {
@@ -54,4 +64,5 @@ body, * {
   background-size: cover;
   color: white;
   padding: 20px 20px 20px 20px;
-}/*# sourceMappingURL=Register.css.map */
+}
+/*# sourceMappingURL=Register.css.map */
