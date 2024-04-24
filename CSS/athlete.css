@@ -1,20 +1,16 @@
 body, * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #mainHeader {
   background-color: #800000;
   height: 9.125rem;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 9.125rem;
+  z-index: 1;
 }
 
 #ScoreTally {
@@ -31,8 +27,7 @@ body, * {
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
   outline: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
   border: 0 !important;
 }
 
@@ -42,7 +37,6 @@ body, * {
   height: 3px;
   background-color: #e74c3c;
   display: block;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -53,10 +47,8 @@ body, * {
 
 /* State when navbar is opened (START) */
 .navbar-toggler .top-bar {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 10% 10%;
-          transform-origin: 10% 10%;
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
 }
 
 .navbar-toggler .middle-bar {
@@ -65,17 +57,14 @@ body, * {
 }
 
 .navbar-toggler .bottom-bar {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: 10% 90%;
-          transform-origin: 10% 90%;
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
 }
 
 /* State when navbar is opened (END) */
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -84,8 +73,7 @@ body, * {
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 /* State when navbar is collapsed (END) */
@@ -98,175 +86,158 @@ body, * {
   background-color: #D9D9D9;
 }
 
+#DepartmentContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  place-items: center;
+}
+
 #CASDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #800000;
+  border-radius: 24px;
   font-weight: bold;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #CANRDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #e23434;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #COEDDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #8d31d3;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #CoengDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #ced41f;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #CBPADept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #d7ce19;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #COTTDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #d7ce19;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #ICSDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #78786d;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #IFMSDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #1e35e2;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #Entienza {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #e2321e;
   font-weight: bold;
+  border-radius: 24px;
   cursor: pointer;
   color: white;
   width: 15.813rem;
   height: 11.625rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #spfooter {
@@ -276,7 +247,7 @@ body, * {
   background-size: cover;
   color: white;
   padding: 20px 20px 20px 20px;
-  position: absolute;
+  position: relative;
+  top: 0;
   bottom: 0;
-}
-/*# sourceMappingURL=athlete.css.map */
+}/*# sourceMappingURL=athlete.css.map */
