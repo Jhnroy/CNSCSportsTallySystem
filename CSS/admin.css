@@ -1,16 +1,19 @@
 body, * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #mainHeader {
   background-color: #800000;
   height: 9.125rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 9.125rem;
 }
 
@@ -28,7 +31,8 @@ body, * {
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
   outline: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   border: 0 !important;
 }
 
@@ -38,6 +42,7 @@ body, * {
   height: 3px;
   background-color: #e74c3c;
   display: block;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -48,8 +53,10 @@ body, * {
 
 /* State when navbar is opened (START) */
 .navbar-toggler .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
 }
 
 .navbar-toggler .middle-bar {
@@ -58,14 +65,17 @@ body, * {
 }
 
 .navbar-toggler .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+          transform-origin: 10% 90%;
 }
 
 /* State when navbar is opened (END) */
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -74,7 +84,8 @@ body, * {
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 /* State when navbar is collapsed (END) */
@@ -96,4 +107,5 @@ body, * {
   padding: 20px 20px 20px 20px;
   position: absolute;
   bottom: 0;
-}/*# sourceMappingURL=admin.css.map */
+}
+/*# sourceMappingURL=admin.css.map */
