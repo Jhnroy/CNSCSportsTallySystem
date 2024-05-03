@@ -8,6 +8,7 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
     position: sticky;
     top: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
     
 }
 
@@ -115,7 +116,7 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
 #spfooter{
     width: 123.875rem;
     height: 24.875rem;
-    background-image: url(/IMG/header-color.png);
+    background-color: #800000;
     background-size: cover;
     color: white;
     padding: 20px 20px 20px 20px;
