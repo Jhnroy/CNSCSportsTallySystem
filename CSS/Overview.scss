@@ -15,67 +15,56 @@ body,*{
 
 
 #TitleSportsContainer h1{
+    background-color: #800000;
+    color: white;
+    width: 100%;
     text-align: center;
     font-weight: bold;
-    margin: 2rem;
+    padding: 1rem;
 }
-
-#AddAthleteForm {
-    margin-top: 20px;
-    
-}
-
-#AddAthleteForm {
-    margin-top: 20px;
-    background-color: #800000;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#AddAthleteForm h2 {
-    text-align: center;
-    color: white;
-}
-
-.athlete-form {
-    max-width: 400px;
-    margin: auto;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: white;
-}
-
-.form-group input {
+#OverviewTableContainer {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+#OverviewTableContainer th, #OverviewTableContainer td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
+#OverviewTableContainer th {
+    background-color: #f2f2f2;
 }
 
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    #OverviewTableContainer {
+        overflow-x: auto;
+        display: block;
+    }
 
+    #OverviewTableContainer th, #OverviewTableContainer td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px; /* Adjust as needed */
+    }
 
+    #OverviewTableContainer th:first-child, #OverviewTableContainer td:first-child {
+        display: none; /* Hide first column on small screens */
+    }
+
+    #OverviewTableContainer tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #OverviewTableContainer td {
+        width: 50%;
+    }
+}
 
 .navbar-toggler {
     border: 0 !important;
@@ -140,225 +129,6 @@ button[type="submit"]:hover {
     background-color: #777777;
 }
 
-#NavBarContainer{
-    background-color: #D9D9D9;
-    padding: 1rem;
-}
-#SportsContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.25rem;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    place-items: center;
-    font-size:x-large;
-}
-
-#CasArnis{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasAthletics{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasBadminton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasBasketball{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasChess{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-#CasFutsal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasMobileLegend{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#CasSepakTakraw{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasSoccer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasTableTennis{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CasVolleyball{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-#CasMassDemo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #spfooter{
     width: 123.875rem;
@@ -371,3 +141,4 @@ button[type="submit"]:hover {
     top: 0;
     bottom: 0;
 }
+

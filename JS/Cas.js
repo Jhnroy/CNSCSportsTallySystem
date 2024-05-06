@@ -34,6 +34,8 @@ function showFormBelowButton(button) {
     addAthleteForm.style.display = "block";
 }
 
+
+
 // Loop through all buttons and attach the event listener
 sportsButtons.forEach(function(button) {
     button.addEventListener("click", function() {
@@ -65,7 +67,3 @@ window.addEventListener("resize", function() {
         }
     }
 });
-
-
-
-
