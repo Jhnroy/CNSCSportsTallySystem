@@ -15,10 +15,10 @@ body, * {
   z-index: 1;
 }
 
-#ScoreTally {
-  width: 47.688rem;
-  height: 53.938rem;
-  background-color: antiquewhite;
+#TitleSportsContainer h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
 }
 
 .navbar-toggler {
@@ -97,11 +97,11 @@ body, * {
   padding: 1rem;
 }
 
-#DepartmentContainer {
+#SportsContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.25rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -111,177 +111,10 @@ body, * {
           align-items: center;
   height: 100vh;
   place-items: center;
+  font-size: x-large;
 }
 
-#CASDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  background-color: #800000;
-  text-decoration: none;
-  border-radius: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CANRDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  background-color: #e23434;
-  font-weight: bold;
-  border-radius: 24px;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#COEDDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-decoration: none;
-  text-align: center;
-  background-color: #8d31d3;
-  font-weight: bold;
-  border-radius: 24px;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CoengDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  background-color: #ced41f;
-  font-weight: bold;
-  border-radius: 24px;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CBPADept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  background-color: #d7ce19;
-  font-weight: bold;
-  border-radius: 24px;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#COTTDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  background-color: #d7ce19;
-  font-weight: bold;
-  border-radius: 24px;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#ICSDept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-decoration: none;
-  text-align: center;
-  background-color: #78786d;
-  font-weight: bold;
-  border-radius: 24px;
-  cursor: pointer;
-  color: white;
-  width: 15.813rem;
-  height: 11.625rem;
-  border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#IFMSDept {
+#CasArnis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +138,7 @@ body, * {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#Entienza {
+#CasAthletics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,9 +148,9 @@ body, * {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   text-decoration: none;
-  background-color: #e2321e;
+  text-align: center;
+  background-color: #1e35e2;
   font-weight: bold;
   border-radius: 24px;
   cursor: pointer;
@@ -329,10 +162,244 @@ body, * {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#CourseList {
+#CasBadminton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasBasketball {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasChess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasFutsal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasMobileLegend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasSepakTakraw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasSoccer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasTableTennis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasVolleyball {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasMassDemo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #spfooter {
@@ -346,4 +413,4 @@ body, * {
   top: 0;
   bottom: 0;
 }
-/*# sourceMappingURL=athlete.css.map */
+/*# sourceMappingURL=Coed.css.map */

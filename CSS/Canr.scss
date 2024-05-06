@@ -1,4 +1,4 @@
-body, *{
+body,*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -14,10 +14,10 @@ body, *{
 }
 
 
-#ScoreTally{
-    width: 47.688rem;
-    height: 53.938rem;
-    background-color: antiquewhite;
+#TitleSportsContainer h1{
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem;
 }
 
 
@@ -88,137 +88,18 @@ body, *{
     background-color: #D9D9D9;
     padding: 1rem;
 }
-
-#DepartmentContainer{
+#SportsContainer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.25rem;
     justify-content: center;
     align-items: center;
     height: 100vh;
     place-items: center;
+    font-size:x-large;
 }
 
-#CASDept{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #800000;
-    text-decoration: none;
-    border-radius: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CANRDept{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    justify-content: center;
-    text-align: center;
-    background-color: #e23434;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-#COEDDept{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #8d31d3;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CoengDept{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    background-color: #ced41f;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#CBPADept{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    background-color: #d7ce19;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-#COTTDept{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    background-color: #d7ce19;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#ICSDept{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #78786d;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#IFMSDept{
+#CasArnis{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,13 +116,13 @@ body, *{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#Entienza{
+#CasAthletics{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     text-decoration: none;
-    background-color: #e2321e;
+    text-align: center;
+    background-color: #1e35e2;
     font-weight: bold;
     border-radius: 24px;
     cursor: pointer;
@@ -252,9 +133,177 @@ body, *{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#CourseList{
+#CasBadminton{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#CasBasketball{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasChess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#CasFutsal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasMobileLegend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#CasSepakTakraw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasSoccer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasTableTennis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CasVolleyball{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#CasMassDemo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 #spfooter{
     width: 123.875rem;
     height: 24.875rem;
