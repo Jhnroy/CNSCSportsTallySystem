@@ -1,3 +1,5 @@
+
+
 // Get all buttons inside the SportsContainer
 var sportsButtons = document.querySelectorAll("#SportsContainer button");
 
@@ -63,3 +65,7 @@ window.addEventListener("resize", function() {
         }
     }
 });
+
+
+
+
