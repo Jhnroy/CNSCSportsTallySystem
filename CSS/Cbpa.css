@@ -21,59 +21,6 @@ body, * {
   margin: 2rem;
 }
 
-#AddAthleteForm {
-  margin-top: 20px;
-}
-
-#AddAthleteForm {
-  margin-top: 20px;
-  background-color: #800000;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-#AddAthleteForm h2 {
-  text-align: center;
-  color: white;
-}
-
-.athlete-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: white;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
 .navbar-toggler {
   border: 0 !important;
 }
@@ -466,4 +413,4 @@ button[type="submit"]:hover {
   top: 0;
   bottom: 0;
 }
-/*# sourceMappingURL=CAS.css.map */
+/*# sourceMappingURL=Cbpa.css.map */
