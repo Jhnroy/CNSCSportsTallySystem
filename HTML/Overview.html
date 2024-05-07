@@ -71,26 +71,67 @@
             });
         });
 
-        const deleteButton = document.getElementById('deleteButton');
-        deleteButton.addEventListener('click', deleteSelectedRows);
+        // Event listener for search input
+document.getElementById('searchInput').addEventListener('input', () => {
+    const searchText = document.getElementById('searchInput').value.trim().toLowerCase();
 
-    // Function to delete selected rows and corresponding documents from Firestore
-    function deleteSelectedRows() {
-        const selectedRows = document.querySelectorAll('.selected');
-        const batch = firestore.batch();
-        selectedRows.forEach(row => {
-            const studentID = row.dataset.studentId; // Assuming you have a studentID as a unique identifier
-            const docRef = firestore.collection("Casathletes").doc(studentID);
-            batch.delete(docRef);
-            row.remove(); // Remove the row from the table
+    // Loop through each row in the table
+    Array.from(table.querySelectorAll('tr')).forEach(row => {
+        // Skip the header row
+        if (!row.cells.length) return;
+        
+        // Check if any cell value matches the search text
+        let rowMatchesSearch = false;
+        Array.from(row.cells).forEach(cell => {
+            if (cell.textContent.toLowerCase().includes(searchText)) {
+                rowMatchesSearch = true;
+            }
         });
-        // Commit the batch operation
-        batch.commit().then(() => {
-            console.log("Batch deletion successful");
-        }).catch((error) => {
-            console.error("Error deleting documents: ", error);
+
+        // Toggle row visibility based on search results
+        row.style.display = rowMatchesSearch ? '' : 'none';
+    });
+});
+
+// Event listener for clearing search input
+document.getElementById('searchInput').addEventListener('change', () => {
+    const searchText = document.getElementById('searchInput').value.trim();
+    
+    // If search input is empty, show all rows
+    if (searchText === '') {
+        Array.from(table.querySelectorAll('tr')).forEach(row => {
+            row.style.display = '';
         });
     }
+});
+
+
+        
+            // Function to delete data from Firestore
+    async function deleteData(docId) {
+        try {
+            await deleteDoc(doc(db, 'Casathletes', docId));
+            console.log("Document successfully deleted from Firestore.");
+        } catch (error) {
+            console.error("Error deleting document: ", error);
+        }
+    }
+    // Event listener for delete button
+    document.getElementById('deleteButton').addEventListener('click', async () => {
+        const selectedRows = Array.from(table.querySelectorAll('tr input[type="checkbox"]:checked')).map(checkbox => checkbox.closest('tr'));
+        const deletePromises = [];
+        
+        // Delete data from Firestore and remove row from table
+        selectedRows.forEach(row => {
+            const docId = row.cells[1].textContent; // Assuming student ID is in the second column
+            deletePromises.push(deleteData(docId));
+            deleteRow(row);
+        });
+
+        // Wait for all delete operations to complete
+        await Promise.all(deletePromises);
+    });
+
   </script>
 
 </head>
@@ -250,7 +291,7 @@
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
 
-    <script src="/JS/Overview.js"defer></script>
+    <!-- <script src="/JS/Overview.js"defer></script> -->
 
     
 </body>
