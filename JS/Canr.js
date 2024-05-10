@@ -62,4 +62,14 @@ $(document).ready(function() {
             }
         }
     });
+
+    // Close button event listener
+    $(".close-btn").on("click", function() {
+        addAthleteForm.css("display", "none");
+    });
+    
+    // Adjust form position when window is resized
+    $(window).on("resize", function() {
+        // Your existing code for adjusting form position
+    });
 });
