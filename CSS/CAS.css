@@ -362,4 +362,41 @@ button[type=submit]:hover {
   position: relative;
   top: 0;
   bottom: 0;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Icon styling */
+.close-btn i {
+  color: #ffffff; /* Adjust the color as needed */
+  font-size: 4vh; /* Adjust the size as needed */
+}
+
+/* CSS for mobile view */
+@media (max-width: 767px) {
+  .athlete-form {
+    width: 90%;
+    margin: 20px auto;
+  }
+  #SportsContainer {
+    grid-template-columns: repeat(1, 1fr); /* Change to single column for mobile */
+  }
+}
+/* CSS for desktop view */
+@media (min-width: 768px) {
+  .athlete-form {
+    width: 400px; /* Adjust the width as needed */
+    /* Your existing CSS for form positioning */
+  }
+  #SportsContainer {
+    grid-template-columns: repeat(4, 1fr); /* Restore columns for desktop */
+  }
 }/*# sourceMappingURL=CAS.css.map */
