@@ -1,36 +1,36 @@
 body, *{
-    padding: 0;
+    padding:  0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 #mainHeader{
     background-color: #800000;
     height: 9.125rem;
     position: sticky;
     top: 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 9.125rem;
+    z-index: 1;
 }
 
 
-#ScoreTally{
-    width: 47.688rem;
-    height: 53.938rem;
-    background-color: antiquewhite;
+#TitleSportsContainer h1{
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem;
 }
 
-
-
-#SetGame{
+#GameScoreContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 5rem;
+    align-items: center;
 }
 
-#FacilitateGame{
+#Basketball{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@ body, *{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#SetGameSchedule{
+#Volleyball{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,12 +64,43 @@ body, *{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#Soccer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#Futsal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color: #1e35e2;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    width: 15.813rem;
+    height: 11.625rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .navbar-toggler {
     border: 0 !important;
 }
-
-
-
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -132,6 +163,7 @@ body, *{
 
 #NavBarContainer{
     background-color: #D9D9D9;
+    padding: 1rem;
 }
 
 #spfooter{
@@ -142,5 +174,6 @@ body, *{
     color: white;
     padding: 20px 20px 20px 20px;
     position: relative;
+    top: 0;
     bottom: 0;
 }

@@ -1,75 +1,24 @@
 body, *{
-    padding: 0;
+    padding:  0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 #mainHeader{
     background-color: #800000;
     height: 9.125rem;
     position: sticky;
     top: 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 9.125rem;
+    z-index: 1;
 }
 
-
-#ScoreTally{
-    width: 47.688rem;
-    height: 53.938rem;
-    background-color: antiquewhite;
-}
-
-
-
-#SetGame{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 5rem;
-}
-
-#FacilitateGame{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#SetGameSchedule{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: #1e35e2;
-    font-weight: bold;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
-    width: 15.813rem;
-    height: 11.625rem;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .navbar-toggler {
     border: 0 !important;
 }
-
-
-
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -123,6 +72,8 @@ body, *{
 .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
 }
+
+
 /* State when navbar is collapsed (END) */
 
 /* Color of Toggler when collapsed */
@@ -132,6 +83,7 @@ body, *{
 
 #NavBarContainer{
     background-color: #D9D9D9;
+    padding: 1rem;
 }
 
 #spfooter{
@@ -142,5 +94,6 @@ body, *{
     color: white;
     padding: 20px 20px 20px 20px;
     position: relative;
+    top: 0;
     bottom: 0;
 }
