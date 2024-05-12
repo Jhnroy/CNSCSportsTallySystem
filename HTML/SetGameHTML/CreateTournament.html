@@ -16,56 +16,100 @@
 
     <title>Create a tournament</title>
 
+    
     <script>
-        $(document).ready(function() {
-            // URL of the Challonge API endpoint to create tournaments
-            var apiEndpoint = "https://api.challonge.com/v1/tournaments.json";
+        // Initialize Firebase
+        const firebaseConfig = {
+          apiKey: "AIzaSyDD2iT8hKifwRuaHv8rVCWW2HebVai24go",
+          authDomain: "cnscsportstallysystem.firebaseapp.com",
+          projectId: "cnscsportstallysystem",
+          storageBucket: "cnscsportstallysystem.appspot.com",
+          messagingSenderId: "504791280062",
+          appId: "1:504791280062:web:e874a37af00024b49531ef",
+          measurementId: "G-0Y9QWR5BS8"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
 
-            // API key for authentication (replace 'YOUR_API_KEY' with your actual API key)
-            var apiKey = "YOUR_API_KEY";
+        // Function to fetch and display tournament data
+        function fetchAndDisplayTournament(tournamentId) {
+            // URL of the Challonge API endpoint to get tournament data
+            var apiEndpoint = "https://api.challonge.com/v1/tournaments/" + tournamentId + ".json";
 
-            // Handle form submission to create a tournament
-            $("#createTournamentForm").submit(function(event) {
-                event.preventDefault();
-
-                // Get the tournament name from the form input
-                var tournamentName = $("#tournamentName").val();
-
-                // Check if the tournament name is empty
-                if (tournamentName.trim() === "") {
-                    $("#error").text("Tournament name is required");
-                    return;
+            // Make GET request to fetch tournament data
+            $.ajax({
+                url: apiEndpoint,
+                type: "GET",
+                success: function(response) {
+                    // Display tournament data on the webpage
+                    $("#tournamentData").html(JSON.stringify(response, null, 4));
+                },
+                error: function(xhr, status, error) {
+                    // Handle errors
+                    console.error("Error fetching tournament data:", error);
+                    $("#tournamentData").html("Error fetching tournament data");
                 }
+            });
+        }
 
-                // Clear any previous error messages
-                $("#error").text("");
+        // Handle form submission to create a tournament
+        $("#createTournamentForm").submit(function(event) {
+            event.preventDefault();
 
-                // Create data object for the POST request
-                var requestData = {
-                    api_key: apiKey,
-                    tournament: {
-                        name: tournamentName
-                        // Add more parameters as needed (e.g., game_id, description, etc.)
-                    }
-                };
+            // Get the tournament name from the form input
+            var tournamentName = $("#tournamentName").val();
 
-                // Send POST request to create tournament
-                $.ajax({
-                    url: apiEndpoint,
-                    type: "POST",
-                    data: requestData,
-                    success: function(response) {
-                        // Handle success response (e.g., display success message)
-                        console.log("Tournament created:", response);
-                    },
-                    error: function(xhr, status, error) {
-                        // Handle errors
-                        console.error("Error creating tournament:", error);
-                    }
-                });
+            // Check if the tournament name is empty
+            if (tournamentName.trim() === "") {
+                $("#error").text("Tournament name is required");
+                return;
+            }
+
+            // Clear any previous error messages
+            $("#error").text("");
+
+            // Add tournament data to Firestore
+            db.collection("tournaments").add({ name: tournamentName })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                // Fetch and display tournament data after creation
+                fetchAndDisplayTournament(docRef.id);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+                // Handle error (e.g., display error message)
             });
         });
+
+        // Function to fetch and display the list of tournaments
+        function fetchAndDisplayTournaments() {
+            // URL of the Challonge API endpoint to get list of tournaments
+            var apiEndpoint = "https://api.challonge.com/v1/tournaments.json";
+
+            // Make GET request to fetch list of tournaments
+            $.ajax({
+                url: apiEndpoint,
+                type: "GET",
+                success: function(response) {
+                    // Display list of tournaments on the webpage
+                    var tournamentsHtml = "";
+                    response.forEach(function(tournament) {
+                        tournamentsHtml += "<p>Tournament Name: " + tournament.tournament.name + "</p>";
+                    });
+                    $("#tournamentData").html(tournamentsHtml);
+                },
+                error: function(xhr, status, error) {
+                    // Handle errors
+                    console.error("Error fetching list of tournaments:", error);
+                    $("#tournamentData").html("Error fetching list of tournaments");
+                }
+            });
+        }
+
+        // Call the function to fetch and display the list of tournaments
+        fetchAndDisplayTournaments();
     </script>
+
 
 
 
@@ -116,14 +160,27 @@
             </div>
         </nav>
 
-        <form id="createTournamentForm">
-            <label for="tournamentName">Tournament Name:</label>
-            <input type="text" id="tournamentName" name="tournamentName" required>
-            <button type="submit">Create Tournament</button>
-            <div id="error" style="color: red;"></div>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form id="createTournamentForm" class="">
+                        <div class="form-group">
+                            <label for="tournamentName">Tournament Name:</label>
+                            <input type="text" id="tournamentName" name="tournamentName" class="form-control border-dark" required>
+                        </div>
 
+                        <div class="text-center">
+                            <button type="submit" id="createTournamentButton" class="btn btn-primary btn-block mb-3 m-3">Create Tournament</button>
+                        </div>
 
+                        <div id="error"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="tournamentData"></div>
 
         <footer id="spfooter">
             <div class="container">
