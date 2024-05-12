@@ -97,3 +97,17 @@ body, *{
     top: 0;
     bottom: 0;
 }
+
+#spfooter *{
+    color: white;
+    text-decoration: none;
+}
+#spfooter a {
+     font-weight: 100;
+     transition: color 0.3s ease;
+     text-decoration: underline; 
+}
+#spfooter a:hover {
+    color: lightgray; 
+    text-decoration: underline; 
+}
