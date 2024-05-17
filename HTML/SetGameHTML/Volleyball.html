@@ -59,6 +59,32 @@
             </div>
         </nav>
 
+
+        
+        <div class="container">
+            <h1 class="text-center mt-4">Volleyball Scoring</h1>
+            <div class="row justify-content-around mt-4">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Team 1</h2>
+                            <p class="card-text">Sets: <span id="sets1">0</span> Score: <span id="score1">0</span> <i id="winIcon1" class="fa"></i></p>
+                            <button id="incrementScore1" class="btn btn-primary">+1</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Team 2</h2>
+                            <p class="card-text">Sets: <span id="sets2">0</span> Score: <span id="score2">0</span> <i id="winIcon2" class="fa"></i></p>
+                            <button id="incrementScore2" class="btn btn-primary">+1</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer id="spfooter">
@@ -148,5 +174,7 @@
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/JS/Gamescore/VolleyballScore.js"></script>
 </body>
 </html>

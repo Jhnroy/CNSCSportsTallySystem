@@ -73,8 +73,9 @@ body, * {
   transition: 1s;
 }
 
-#headline {
-  margin-top: 3rem;
+.headline {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,7 +165,7 @@ th {
 }
 
 #spfooter {
-  width: 123.875rem;
+  width: 100%;
   height: 24.875rem;
   background-color: #800000;
   background-size: cover;
