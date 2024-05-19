@@ -17,99 +17,27 @@
     <title>Create a tournament</title>
 
     
-    <script>
-        // Initialize Firebase
-        const firebaseConfig = {
-          apiKey: "AIzaSyDD2iT8hKifwRuaHv8rVCWW2HebVai24go",
-          authDomain: "cnscsportstallysystem.firebaseapp.com",
-          projectId: "cnscsportstallysystem",
-          storageBucket: "cnscsportstallysystem.appspot.com",
-          messagingSenderId: "504791280062",
-          appId: "1:504791280062:web:e874a37af00024b49531ef",
-          measurementId: "G-0Y9QWR5BS8"
-        };
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-
-        // Function to fetch and display tournament data
-        function fetchAndDisplayTournament(tournamentId) {
-            // URL of the Challonge API endpoint to get tournament data
-            var apiEndpoint = "https://api.challonge.com/v1/tournaments/" + tournamentId + ".json";
-
-            // Make GET request to fetch tournament data
-            $.ajax({
-                url: apiEndpoint,
-                type: "GET",
-                success: function(response) {
-                    // Display tournament data on the webpage
-                    $("#tournamentData").html(JSON.stringify(response, null, 4));
-                },
-                error: function(xhr, status, error) {
-                    // Handle errors
-                    console.error("Error fetching tournament data:", error);
-                    $("#tournamentData").html("Error fetching tournament data");
-                }
-            });
+    <style>
+         .tally-table {
+            margin-top: 20px;
         }
-
-        // Handle form submission to create a tournament
-        $("#createTournamentForm").submit(function(event) {
-            event.preventDefault();
-
-            // Get the tournament name from the form input
-            var tournamentName = $("#tournamentName").val();
-
-            // Check if the tournament name is empty
-            if (tournamentName.trim() === "") {
-                $("#error").text("Tournament name is required");
-                return;
-            }
-
-            // Clear any previous error messages
-            $("#error").text("");
-
-            // Add tournament data to Firestore
-            db.collection("tournaments").add({ name: tournamentName })
-            .then(function(docRef) {
-                console.log("Document written with ID: ", docRef.id);
-                // Fetch and display tournament data after creation
-                fetchAndDisplayTournament(docRef.id);
-            })
-            .catch(function(error) {
-                console.error("Error adding document: ", error);
-                // Handle error (e.g., display error message)
-            });
-        });
-
-        // Function to fetch and display the list of tournaments
-        function fetchAndDisplayTournaments() {
-            // URL of the Challonge API endpoint to get list of tournaments
-            var apiEndpoint = "https://api.challonge.com/v1/tournaments.json";
-
-            // Make GET request to fetch list of tournaments
-            $.ajax({
-                url: apiEndpoint,
-                type: "GET",
-                success: function(response) {
-                    // Display list of tournaments on the webpage
-                    var tournamentsHtml = "";
-                    response.forEach(function(tournament) {
-                        tournamentsHtml += "<p>Tournament Name: " + tournament.tournament.name + "</p>";
-                    });
-                    $("#tournamentData").html(tournamentsHtml);
-                },
-                error: function(xhr, status, error) {
-                    // Handle errors
-                    console.error("Error fetching list of tournaments:", error);
-                    $("#tournamentData").html("Error fetching list of tournaments");
-                }
-            });
+        .score-btn {
+            width: 48%;
+            margin: 2px 1%;
         }
-
-        // Call the function to fetch and display the list of tournaments
-        fetchAndDisplayTournaments();
-    </script>
-
+        .btn-bronze {
+            background-color: #cd7f32;
+            color: white;
+        }
+        .btn-silver {
+            background-color: #c0c0c0;
+            color: white;
+        }
+        .btn-gold {
+            background-color: #ffd700;
+            color: white;
+        }
+    </style>
 
 
 
@@ -160,27 +88,37 @@
             </div>
         </nav>
 
+        
         <div class="container">
+            <h1 class="my-4 text-center">Intercollegiate Meet Tally</h1>
             <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <form id="createTournamentForm" class="">
-                        <div class="form-group">
-                            <label for="tournamentName">Tournament Name:</label>
-                            <input type="text" id="tournamentName" name="tournamentName" class="form-control border-dark" required>
-                        </div>
-
-                        <div class="text-center">
-                            <button type="submit" id="createTournamentButton" class="btn btn-primary btn-block mb-3 m-3">Create Tournament</button>
-                        </div>
-
-                        <div id="error"></div>
-                    </form>
+                <div class="col-md-6">
+                    <input type="text" id="teamName" class="form-control" placeholder="Enter Team Name">
+                </div>
+                <div class="col-md-6">
+                    <button id="addTeamBtn" class="btn btn-primary btn-block">Add Team</button>
                 </div>
             </div>
+            <table class="table table-striped tally-table">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Gold</th>
+                        <th>Silver</th>
+                        <th>Bronze</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tallyTableBody">
+                </tbody>
+            </table>
         </div>
+    
+       
+    
         
 
-        <div id="tournamentData"></div>
+        
 
         <footer id="spfooter">
             <div class="container">
@@ -273,6 +211,9 @@
 
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        
+        <script src="/JS/Tally.js"></script>
 </body>
 
 </html>

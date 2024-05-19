@@ -14,6 +14,16 @@
     <link rel="shortcut icon" type="x-icon" href="/IMG/CNSC Logo - White Border.png">
 
     <link rel="stylesheet" href="/CSS/GameScore/GameScore.css">
+
+    <style>
+        .bracket { display: flex; flex-wrap: wrap; }
+        .round { margin: 20px; }
+        .matchup { margin-bottom: 20px; }
+        .team { border: 1px solid #ddd; padding: 10px; border-radius: 5px; cursor: pointer; position: relative; }
+        .winner { background-color: #c8e6c9; }
+        .champion { color: gold; position: absolute; right: -25px; top: 50%; transform: translateY(-50%); }
+        .error { color: red; }
+      </style>
     
     <title>Set a score</title>
 
@@ -63,8 +73,61 @@
               </div>
             </div>
         </nav>
-        
-        <section id="GameScoreContainer">
+
+
+        <div class="container">
+            <h1 class="text-center my-4">Intercollegiate Meet Bracket</h1>
+            
+            <!-- Input Form -->
+            <form id="team-form">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Team 1" id="team1" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Team 2" id="team2" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Team 3" id="team3" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Team 4" id="team4" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary my-3">Set Teams</button>
+              <div id="error-message" class="error"></div>
+            </form>
+            
+            <div class="bracket" id="bracket">
+              <!-- Round 1 -->
+              <div class="round col">
+                <div class="matchup" data-matchup-id="1">
+                  <div class="team" data-team-id="1">Team 1</div>
+                  <div class="team" data-team-id="2">Team 2</div>
+                </div>
+                <div class="matchup" data-matchup-id="2">
+                  <div class="team" data-team-id="3">Team 3</div>
+                  <div class="team" data-team-id="4">Team 4</div>
+                </div>
+              </div>
+              <!-- Round 2 -->
+              <div class="round col">
+                <div class="matchup" data-matchup-id="3">
+                  <div class="team" data-team-id="5">Winner of Match 1</div>
+                  <div class="team" data-team-id="6">Winner of Match 2</div>
+                </div>
+              </div>
+              <!-- Final Round -->
+              <div class="round col">
+                <div class="matchup" data-matchup-id="4">
+                  <div class="team" data-team-id="7">Winner of Round 2</div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- <section id="GameScoreContainer">
             <a href="/HTML/SetGameHTML/Basketball.html" id="Basketball">Basketball</a>
 
             <a href="/HTML/SetGameHTML/Volleyball.html" id="Volleyball">Volleyball</a>
@@ -72,7 +135,7 @@
             <a href="/HTML/SetGameHTML/Soccer.html" id="Soccer">Soccer</a>
 
             <a href="/HTML/SetGameHTML/Futsal.html" id="Futsal">Futsal</a>
-        </section>
+        </section> -->
 
     </main>
 
@@ -165,5 +228,8 @@ crossorigin="anonymous"></script>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="/JS/Bracket.js"></script>
 
 </html>
