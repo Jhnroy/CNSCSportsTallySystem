@@ -41,6 +41,60 @@
 
 
 
+
+<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
+
+
+<script>
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
+
+  
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyDD2iT8hKifwRuaHv8rVCWW2HebVai24go",
+
+    authDomain: "cnscsportstallysystem.firebaseapp.com",
+
+    databaseURL: "https://cnscsportstallysystem-default-rtdb.asia-southeast1.firebasedatabase.app",
+
+    projectId: "cnscsportstallysystem",
+
+    storageBucket: "cnscsportstallysystem.appspot.com",
+
+    messagingSenderId: "504791280062",
+
+    appId: "1:504791280062:web:e874a37af00024b49531ef",
+
+    measurementId: "G-0Y9QWR5BS8"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Reference to the database
+    const database = firebase.database();
+
+    // Button click event listener
+    document.getElementById("addTeamBtn").addEventListener("click", function() {
+        // Get the value from the input field
+        const teamName = document.getElementById("teamName").value;
+
+        // Push data to Firebase
+        database.ref("teams").push({
+            teamName: teamName
+        });
+    });
+</script>
+
 </head>
 
 
@@ -99,6 +153,7 @@
                     <button id="addTeamBtn" class="btn btn-primary btn-block">Add Team</button>
                 </div>
             </div>
+            
             <table class="table table-striped tally-table">
                 <thead>
                     <tr>

@@ -39,9 +39,29 @@
           <marquee behavior="alternate" direction="left"><h1>INTERCOL CURRENT TALLY</h1></marquee>
         </section>
 
-        <div class="table-container">
-          
-        </div>
+        <div class="container">
+          <h1 class="my-4 text-center">Intercollegiate Meet Tally</h1>
+          <div class="row">
+              <div class="col-md-6">
+                  <input type="text" id="teamName" class="form-control" placeholder="Enter Team Name">
+              </div>
+              <div class="col-md-6">
+                  <button id="addTeamBtn" class="btn btn-primary btn-block">Add Team</button>
+              </div>
+          </div>
+          <table class="table table-striped tally-table">
+              <thead>
+                  <tr>
+                      <th>Team Name</th>
+                      <th>Gold</th>
+                      <th>Silver</th>
+                      <th>Bronze</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody id="tallyTableBody">
+              </tbody>
+          </table>
         
 
         <section class="headline">
@@ -243,6 +263,8 @@
     </footer>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="/JS/Tally.js"></script>
 </body>
 
 </html>
