@@ -1,4 +1,18 @@
 $(document).ready(function() {
+    // Function to retrieve saved bracket data from localStorage
+    function retrieveBracketData() {
+        const bracketData = localStorage.getItem('bracketData');
+        if (bracketData) {
+            const bracket = JSON.parse(bracketData);
+            bracket.forEach(function(team, index) {
+                $('[data-team-id="' + (index + 1) + '"]').text(team).removeClass('winner champion');
+            });
+        }
+    }
+
+    // Call retrieveBracketData function on document ready
+    retrieveBracketData();
+
     $('#team-form').submit(function(event) {
         event.preventDefault(); // Prevent the form from submitting the traditional way
 
@@ -30,8 +44,8 @@ $(document).ready(function() {
             $('[data-team-id="' + (index + 1) + '"]').text(team).removeClass('winner champion');
         });
 
-        // Remove any existing champion icon
-        $('.champion').remove();
+        // Save bracket data to localStorage
+        localStorage.setItem('bracketData', JSON.stringify(teams));
 
         // Clear the input fields
         $('#team-form')[0].reset();
@@ -58,5 +72,12 @@ $(document).ready(function() {
         if (nextTeamId === 7) {
             $nextRoundTeam.append('<i class="fas fa-trophy champion"></i>');
         }
+
+        // Update bracket data in localStorage
+        const updatedBracket = [];
+        for (let i = 1; i <= 8; i++) {
+            updatedBracket.push($('[data-team-id="' + i + '"]').text());
+        }
+        localStorage.setItem('bracketData', JSON.stringify(updatedBracket));
     });
 });
