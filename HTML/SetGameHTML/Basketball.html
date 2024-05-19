@@ -13,6 +13,9 @@
     <link rel="shortcut icon" type="x-icon" href="/IMG/CNSC Logo - White Border.png">
 
     <link rel="stylesheet" href="/CSS/GameScore/Basketball.css">
+    
+
+    
 
     <title>Basketball</title>
 
@@ -61,6 +64,51 @@
               </div>
             </div>
         </nav>
+        
+        <section id="live-score" class="container">
+            <div class="d-flex justify-content-center mb-3">
+                <h2>Live Score Basketball</h2>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <div class="text-center mb-3">
+                            <div id="home-team" class="mb-2">Home Team: 0</div>
+                            <button class="btn btn-primary mr-2 home-score" data-points="3">Home Score +3</button>
+                            <button class="btn btn-primary mr-2 home-score" data-points="2">Home Score +2</button>
+                            <button class="btn btn-primary home-score" data-points="1">Home Score +1</button>
+                        </div>
+                    </div>
+            
+                    <div class="col-sm-6">
+                        <div class="text-center mb-3">
+                            <div id="away-team" class="mb-2">Away Team: 0</div>
+                            <button class="btn btn-primary mr-2 away-score" data-points="3">Away Score +3</button>
+                            <button class="btn btn-primary mr-2 away-score" data-points="2">Away Score +2</button>
+                            <button class="btn btn-primary away-score" data-points="1">Away Score +1</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 text-center">
+                        <div class="mb-3">
+                            <div id="timer">Timer: <span id="minutes">10</span>:<span id="seconds">00</span></div>
+                            <div id="quarter">Quarter: <span id="current-quarter">1</span></div>
+                            <button class="btn btn-warning mr-2" id="start-btn">Start</button>
+                            <button class="btn btn-warning mr-2" id="pause-btn">Pause</button>
+                            <button class="btn btn-danger" id="reset-btn">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+            
+        </section>
 
     </main>
 
@@ -151,6 +199,10 @@
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/JS/Gamescore/Basketball.js" defer></script>
+
+    <script src="/JS/Gamescore/BasketballTime.js"></script>
 
 </body>
 </html>
