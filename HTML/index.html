@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/CSS/style.css">
 
     <link rel="shortcut icon" type="x-icon" href="/IMG/CNSC Logo - White Border.png">
+    
+   
+
     <title>CNSC Sports Tally System</title>
 </head>
 
@@ -28,11 +31,38 @@
         </header>
 
         <section class="headline">
-          <marquee behavior="alternate" direction="left"><h1>Happening Now</h1></marquee>
+          <marquee behavior="alternate" direction="left"><h1>Current Bracket</h1></marquee>
         </section>
 
-        <iframe width="100%" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-        </iframe>
+        <div class="container non-clickable">
+          <h1 class="text-center my-4">Intercollegiate Meet Bracket</h1>
+          <div class="bracket" id="bracket">
+            <!-- Round 1 -->
+            <div class="round col">
+              <div class="matchup" data-matchup-id="1">
+                <div class="team" data-team-id="1">Team 1</div>
+                <div class="team" data-team-id="2">Team 2</div>
+              </div>
+              <div class="matchup" data-matchup-id="2">
+                <div class="team" data-team-id="3">Team 3</div>
+                <div class="team" data-team-id="4">Team 4</div>
+              </div>
+            </div>
+            <!-- Round 2 -->
+            <div class="round col">
+              <div class="matchup" data-matchup-id="3">
+                <div class="team" data-team-id="5">Winner of Match 1</div>
+                <div class="team" data-team-id="6">Winner of Match 2</div>
+              </div>
+            </div>
+            <!-- Final Round -->
+            <div class="round col">
+              <div class="matchup" data-matchup-id="4">
+                <div class="team" data-team-id="7">Winner of Round 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
         
 
         <section class="headline">
@@ -40,29 +70,27 @@
         </section>
 
         <div class="container">
-          <h1 class="my-4 text-center">Intercollegiate Meet Tally</h1>
           <div class="row">
-              <div class="col-md-6">
-                  <input type="text" id="teamName" class="form-control" placeholder="Enter Team Name">
-              </div>
-              <div class="col-md-6">
-                  <button id="addTeamBtn" class="btn btn-primary btn-block">Add Team</button>
-              </div>
+           
           </div>
-          <table class="table table-striped tally-table">
-              <thead>
-                  <tr>
-                      <th>Team Name</th>
-                      <th>Gold</th>
-                      <th>Silver</th>
-                      <th>Bronze</th>
-                      <th>Actions</th>
-                  </tr>
-              </thead>
-              <tbody id="tallyTableBody">
-              </tbody>
-          </table>
+          <table class="table table-striped tally-table text-dark non-clickable">
+            <thead>
+              <tr>
+                  <th>Team Name</th>
+                  <th>Gold</th>
+                  <th>Silver</th>
+                  <th>Bronze</th>
+              </tr>
+          </thead>
+          
+          <tbody id="tallyTableBody">
+          </tbody>
+          </table> 
+        </div>
         
+          
+        </div>
+
 
         <section class="headline">
           <marquee behavior="alternate" direction="left"><h1>ATHLETE’S PROFILE</h1></marquee>
@@ -264,7 +292,10 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <script src="/JS/Tally.js"></script>
+
+    <script src="/JS/Bracket.js"></script>
+    <script src="/JS/Tally.js" defer></script>
+    
 </body>
 
 </html>

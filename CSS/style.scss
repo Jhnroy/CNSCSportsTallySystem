@@ -129,6 +129,21 @@ body,*{padding: 0; margin: 0; box-sizing: border-box; font-family: Arial, Helvet
   }
 
 
+  .bracket { display: flex; flex-wrap: wrap; }
+      .round { margin: 20px; }
+      .matchup { margin-bottom: 20px; }
+      .team { border: 1px solid #ddd; padding: 10px; border-radius: 5px; cursor: pointer; position: relative; }
+      .winner { background-color: #c8e6c9; }
+      .champion { color: gold; position: absolute; right: -25px; top: 50%; transform: translateY(-50%); }
+      .error { color: red; }
+      .non-clickable {
+        pointer-events: none;
+      }
+      h2 {
+        font-weight: bold;
+        margin-bottom: 20px; /* Adds some space between the header and the table */
+      }
+
 
 // Carousel
 .c-item {

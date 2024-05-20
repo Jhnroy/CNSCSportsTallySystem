@@ -51,12 +51,17 @@ $(document).ready(function() {
                     <td>${team.silver}</td>
                     <td>${team.gold}</td>
                     <td>
-                        <button class="btn btn-bronze score-btn" data-index="${index}" data-category="bronze" data-delta="1">Bronze +</button>
-                        <button class="btn btn-bronze score-btn" data-index="${index}" data-category="bronze" data-delta="-1">Bronze -</button>
+                        <button class="btn btn-bronze score-btn" data-index="${index}" data-category="bronze" data-delta="1">Gold +</button>
+
+                        <button class="btn btn-bronze score-btn" data-index="${index}" data-category="bronze" data-delta="-1">Gold -</button>
+
                         <button class="btn btn-silver score-btn" data-index="${index}" data-category="silver" data-delta="1">Silver +</button>
+
                         <button class="btn btn-silver score-btn" data-index="${index}" data-category="silver" data-delta="-1">Silver -</button>
-                        <button class="btn btn-gold score-btn" data-index="${index}" data-category="gold" data-delta="1">Gold +</button>
-                        <button class="btn btn-gold score-btn" data-index="${index}" data-category="gold" data-delta="-1">Gold -</button>
+
+                        <button class="btn btn-gold score-btn" data-index="${index}" data-category="gold" data-delta="1">Bronze +</button>
+
+                        <button class="btn btn-gold score-btn" data-index="${index}" data-category="gold" data-delta="-1">Bronze -</button>
                     </td>
                 </tr>
             `;
