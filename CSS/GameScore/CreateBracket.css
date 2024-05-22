@@ -12,18 +12,16 @@ body, * {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 9.125rem;
+  z-index: 1;
 }
 
-#ScoreTally {
-  width: 47.688rem;
-  height: 53.938rem;
-  background-color: antiquewhite;
+#TitleSportsContainer h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
 }
 
-#SetGame {
+#GameScoreContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,9 +33,12 @@ body, * {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#FacilitateGame {
+#Basketball {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +62,55 @@ body, * {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#SetGameSchedule {
+#Volleyball {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Soccer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #1e35e2;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  width: 15.813rem;
+  height: 11.625rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Futsal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,6 +207,7 @@ body, * {
 
 #NavBarContainer {
   background-color: #D9D9D9;
+  padding: 1rem;
 }
 
 #spfooter {
@@ -188,4 +238,4 @@ body, * {
   color: lightgray;
   text-decoration: underline;
 }
-/*# sourceMappingURL=admin.css.map */
+/*# sourceMappingURL=CreateBracket.css.map */

@@ -8,7 +8,9 @@
 
     <!-- CDN link for font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
+
+    <!-- PageLogo -->
     <link rel="shortcut icon" type="x-icon" href="/IMG/CNSC Logo - White Border.png">
 
     <link rel="stylesheet" href="/CSS/CAS.css">
@@ -77,7 +79,7 @@
             console.error("Error adding document: ", error);
         });
         });
-      </script>
+    </script>
 </head>
 
 <body>
@@ -218,77 +220,7 @@
     </form>
         </section>
 
-        <section id="AddAthleteForm" style="display: none;">
-            <h2>Add an Athlete</h2>
-            <form id="athleteForm" class="athlete-form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteStudentID">Student ID:</label>
-                            <input type="number" id="athleteStudentID" name="athleteStudentID" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteFirstName">First Name:</label>
-                            <input type="text" id="athleteFirstName" name="athleteFirstName" class="form-control" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteLastName">Last Name:</label>
-                            <input type="text" id="athleteLastName" name="athleteLastName" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteAge">Age:</label>
-                            <input type="number" id="athleteAge" name="athleteAge" class="form-control" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteGender">Gender:</label>
-                            <select id="athleteGender" name="athleteGender" class="form-control" required>
-                                <option value="">Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteSport">Sport:</label>
-                            <input type="text" id="athleteSport" name="athleteSport" class="form-control" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteDepartment">Department:</label>
-                            <input type="text" id="athleteDepartment" name="athleteDepartment" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="athleteAddress">Address:</label>
-                            <input type="text" id="athleteAddress" name="athleteAddress" class="form-control" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center"> <!-- Centered button -->
-                        <button type="submit" class="btn btn-primary">Add Athlete</button>
-                    </div>
-                </div>
-            </form>
-        </section>
+        
         
     </main>
 

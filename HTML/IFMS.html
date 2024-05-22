@@ -12,6 +12,70 @@
     <link rel="stylesheet" href="">
 
 
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyDD2iT8hKifwRuaHv8rVCWW2HebVai24go",
+          authDomain: "cnscsportstallysystem.firebaseapp.com",
+          projectId: "cnscsportstallysystem",
+          storageBucket: "cnscsportstallysystem.appspot.com",
+          messagingSenderId: "504791280062",
+          appId: "1:504791280062:web:e874a37af00024b49531ef",
+          measurementId: "G-0Y9QWR5BS8"
+        };
+        firebase.initializeApp(firebaseConfig);
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Reference to the Firestore database
+        var db = firebase.firestore();
+
+        // Function to handle form submission
+        document.getElementById("athleteForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form values
+        var athleteStudentID = document.getElementById("athleteStudentID").value;
+        var athleteFirstName = document.getElementById("athleteFirstName").value;
+        var athleteLastName = document.getElementById("athleteLastName").value;
+        var athleteAge = document.getElementById("athleteAge").value;
+        var athleteGender = document.getElementById("athleteGender").value;
+        var athleteSport = document.getElementById("athleteSport").value;
+        var athleteAddress = document.getElementById("athleteAddress").value;
+        var athleteDepartment = document.getElementById("athleteDepartment").value;
+
+        
+        // Add data to Firestore
+        db.collection("IFMSathletes").add({
+            studentID: athleteStudentID,
+            firstName: athleteFirstName,
+            lastName: athleteLastName,
+            age: athleteAge,
+            gender: athleteGender,
+            sport: athleteSport,
+            address: athleteAddress,
+            department: athleteDepartment
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+            // Clear form after successful submission
+            document.getElementById("athleteForm").reset();
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+        });
+    </script>
+    
     <title>IFMS</title>
 </head>
 <body>
@@ -167,5 +231,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/JS/IFMS.js"></script>
 </body>
 </html>

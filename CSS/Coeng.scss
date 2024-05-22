@@ -21,6 +21,60 @@ body,*{
 }
 
 
+
+#AddAthleteForm {
+    margin-top: 20px;
+    background-color: #800000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#AddAthleteForm h2 {
+    text-align: center;
+    color: white;
+}
+
+.athlete-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+
 .navbar-toggler {
     border: 0 !important;
 }
@@ -314,4 +368,45 @@ body,*{
     position: relative;
     top: 0;
     bottom: 0;
+}
+
+
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Icon styling */
+.close-btn i {
+    color: #ffffff; /* Adjust the color as needed */
+    font-size: 4vh; /* Adjust the size as needed */
+}
+
+/* CSS for mobile view */
+@media (max-width: 767px) {
+    .athlete-form {
+        width: 90%;
+        margin: 20px auto;
+    }
+    #SportsContainer {
+        grid-template-columns: repeat(1, 1fr); /* Change to single column for mobile */
+    }
+}
+
+/* CSS for desktop view */
+@media (min-width: 768px) {
+    .athlete-form {
+        width: 400px; /* Adjust the width as needed */
+        /* Your existing CSS for form positioning */
+    }
+
+    #SportsContainer {
+        grid-template-columns: repeat(4, 1fr); /* Restore columns for desktop */
+    }
 }

@@ -1,16 +1,19 @@
 body, * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #mainHeader {
   background-color: #800000;
   height: 9.125rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 2;
 }
 
@@ -22,7 +25,7 @@ body, * {
   position: absolute;
   right: 0;
   top: 20px;
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 #SignupBtn {
@@ -34,7 +37,8 @@ body, * {
   background: none;
   color: white;
   font-weight: bold;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #LoginBtn {
@@ -46,38 +50,49 @@ body, * {
   background: none;
   color: white;
   font-weight: bold;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #MainContainer {
-  animation: transitionIn 0.75s;
+  -webkit-animation: transitionIn 0.75s;
+          animation: transitionIn 0.75s;
 }
 
 #LoginBtn:hover {
   background-color: white;
   color: #800000;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 #SignupBtn:hover {
   background-color: white;
   color: #800000;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 .headline {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 3rem;
   height: 5rem;
   background-color: #800000;
   color: white;
   text-align: center;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #ScoreTally {
@@ -87,14 +102,21 @@ body, * {
 }
 
 #containerInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .carousel {
-  margin: 0 auto; /* Horizontal centering */
+  margin: 0 auto;
+  /* Horizontal centering */
 }
 
 /* Basic styles for the table */
@@ -108,7 +130,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 th, td {
@@ -128,9 +151,13 @@ th {
     font-size: 14px;
   }
 }
+
 .bracket {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .round {
@@ -158,7 +185,8 @@ th {
   position: absolute;
   right: -25px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .error {
@@ -171,7 +199,8 @@ th {
 
 h2 {
   font-weight: bold;
-  margin-bottom: 20px; /* Adds some space between the header and the table */
+  margin-bottom: 20px;
+  /* Adds some space between the header and the table */
 }
 
 .c-item {
@@ -182,7 +211,8 @@ h2 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
 }
 
 #spfooter {
@@ -192,15 +222,51 @@ h2 {
   background-size: cover;
   color: white;
   padding: 20px 20px 20px 20px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+
+#spfooter * {
+  color: white;
+  text-decoration: none;
+}
+
+#spfooter a {
+  font-weight: 100;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+#spfooter a:hover {
+  color: lightgray;
+  text-decoration: underline;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
 }
 
 @keyframes transitionIn {
   from {
     opacity: 0;
-    transform: rotateX(-10deg);
+    -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
   }
   to {
     opacity: 1;
-    transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
